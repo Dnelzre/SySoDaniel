@@ -4,7 +4,6 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def count_lines(file_path):
-    """Zählt die Zeilen in einer Datei."""
     try:
         with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
             return sum(1 for _ in file)
@@ -13,7 +12,6 @@ def count_lines(file_path):
         return 0
 
 def find_matching_files(folder_path, regex_str):
-    """Findet alle Dateien, die auf den Regex passen."""
     regex = re.compile(regex_str)
     matching_files = []
     for root, _, files in os.walk(folder_path):
@@ -23,7 +21,6 @@ def find_matching_files(folder_path, regex_str):
     return matching_files
 
 def count_lines_in_all_files_parallel(folder_path, regex_str, max_threads=8):
-    """Zählt Zeilen in allen passenden Dateien parallel mit Threads."""
     matching_files = find_matching_files(folder_path, regex_str)
     total_lines = 0
 
