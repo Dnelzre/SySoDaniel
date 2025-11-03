@@ -31,6 +31,7 @@ def count_lines_in_all_files_parallel(folder_path, regex_str, max_threads=8):
 
     return total_lines
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Zählt Zeilen in allen Dateien, die auf einen Regex passen (parallel).')
     parser.add_argument('folder_path', help='Pfad zum Ordner')
@@ -39,5 +40,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    start_time = time.time()
     total_lines = count_lines_in_all_files_parallel(args.folder_path, args.regex_str, args.threads)
+    end_time = time.time()
+
     print(f"Gesamtanzahl der Zeilen: {total_lines}")
+    print(f"Ausführungszeit mit {args.threads} Threads: {end_time - start_time:.2f} Sekunden")
