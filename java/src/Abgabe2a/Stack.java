@@ -1,5 +1,5 @@
-package Abgabe2;
-public class StackNr1a {
+package Abgabe2a;
+public class Stack {
     private int[] stack;
     private int position = 0;
 
