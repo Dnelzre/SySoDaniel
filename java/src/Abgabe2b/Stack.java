@@ -8,9 +8,7 @@ public class Stack {
         stack = new int[n];
     }
 
-    // push-Methode (legt ein Element auf den Stack)
     public synchronized void push(int item) {
-        // Warten, solange der Stack voll ist
         while (position == stack.length) {
             try {
                 System.out.println(Thread.currentThread().getName() + " wartet: Stack ist voll");
@@ -29,9 +27,7 @@ public class Stack {
         notifyAll();
     }
 
-    // pop-Methode (nimmt ein Element vom Stack)
     public synchronized int pop() {
-        // Warten, solange der Stack leer ist
         while (position == 0) {
             try {
                 System.out.println(Thread.currentThread().getName() + " wartet: Stack ist leer");
@@ -41,12 +37,10 @@ public class Stack {
             }
         }
 
-        // Element entnehmen
         position--;
         int item = stack[position];
         System.out.println(Thread.currentThread().getName() + " hat " + item + " gepoppt");
 
-        // Wartende Threads benachrichtigen
         notifyAll();
         return item;
     }
