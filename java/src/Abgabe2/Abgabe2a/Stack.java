@@ -1,4 +1,4 @@
-package Abgabe2a;
+package Abgabe2.Abgabe2a;
 public class Stack {
     private int[] stack;
     private int position = 0;

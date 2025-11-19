@@ -1,4 +1,4 @@
-package Abgabe2c;
+package Abgabe2.Abgabe2a.Abgabe2c;
 
 //notifyAll() weckt alle Threads auf, die auf das Object warten
 // bei Notify wird nur einer Geweckt, dieser führt dann zum Deadlock da wenn ein weiterer Producer geweckt werden kann obwohl der stack noch voll ist.

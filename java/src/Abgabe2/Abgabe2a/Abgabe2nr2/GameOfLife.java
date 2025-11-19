@@ -1,4 +1,4 @@
-package Abgabe2nr2;
+package Abgabe2.Abgabe2a.Abgabe2nr2;
 
 public class GameOfLife {
     public static void main(String[] args) {

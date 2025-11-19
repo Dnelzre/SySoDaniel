@@ -1,7 +1,4 @@
-package Abgabe2nr2;
-
-import java.util.Random;
-import java.util.concurrent.Callable;
+package Abgabe2.Abgabe2a.Abgabe2nr2;
 
 class Stopwatch {
 

@@ -1,9 +1,9 @@
-package Abgabe2b;
+package Abgabe2.Abgabe2a.Abgabe2b;
 
-public class Consumer extends Thread {
+public class Producer extends Thread {
     private Stack stack;
 
-    public Consumer(Stack stack, String name) {
+    public Producer(Stack stack, String name) {
         super(name);
         this.stack = stack;
     }
@@ -11,7 +11,7 @@ public class Consumer extends Thread {
     @Override
     public void run() {
         for (int i = 1; i <= 10; i++) {
-            stack.pop();
+            stack.push(i);
             try {
                 Thread.sleep((int) (Math.random() * 400));
             } catch (InterruptedException e) {
@@ -20,4 +20,3 @@ public class Consumer extends Thread {
         }
     }
 }
-
