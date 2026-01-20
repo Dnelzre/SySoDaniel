@@ -1,0 +1,14 @@
+Starvation
+ReaderPref kann Writer-Starvation verursachen: neue Reader dürfen ständig rein, Writer kommen nie dran.
+
+while statt if
+Wegen Spurious Wakeups und weil nach notify/notifyAll die Bedingung erneut geprüft werden muss.
+
+notify() statt notifyAll()
+Falscher Thread wird geweckt dann ist Bedingung weiterhin falsch und alle blockieren.
+ Reader wird geweckt, obwohl Writer warten und aktiv sein müssten.
+
+Invarianten (Beispiele)
+Nie gleichzeitig Writer und Reader aktiv
+Maximal ein Writer gleichzeitig
+readers >= 0

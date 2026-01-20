@@ -1,0 +1,15 @@
+Warum minimal?
+Nur eine zusätzliche Einschränkung (N−1 gleichzeitig)
+Stärker wäre wenn nur ein Philosoph essen darf
+
+Starvation möglich?
+Ja (ungünstiges Scheduling)
+Reduktion: faire Semaphoren (new Semaphore(…, true))
+
+Zweite deadlock-freie Strategie
+Asymmetrisches Greifen
+z.B. gerade Philosophen links→rechts, ungerade rechts→links.
+Weniger Overhead, aber schwerer zu verallgemeinern.
+
+Verhinderte Deadlock-Bedingung
+Circular Wait wird verhindert (max. N−1 Philosophen im kritischen Bereich)
